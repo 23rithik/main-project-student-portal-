@@ -1,13 +1,15 @@
 import React from 'react'
 import './footer.css'
 import logo from '../../../assets/logo new.png'
+import { Link } from 'react-router-dom'
+import { Button } from '@mui/material'
 
 
 const Footer = () => {
   return (
    <footer >
     <div className="container">
-        <div className="row pb-3 pt-3">
+        <div className="row pb-3 pt-3 ">
             <div className="col-lg-3">
                <div className="footer-about footer-box">
                <img src={logo} alt="" />
@@ -22,10 +24,10 @@ const Footer = () => {
                <div className="footer-links footer-box">
                <h2>Quick Links</h2>
                 <ul>
-                    <li><i class="fa-solid fa-angles-right"></i>Home</li>
-                    <li><i class="fa-solid fa-angles-right"></i>About Us</li>
-                    <li><i class="fa-solid fa-angles-right"></i>login</li>
-                    <li><i class="fa-solid fa-angles-right"></i>SignUp</li>
+                    <li><i class="fa-solid fa-angles-right"></i><Link to='/' style={{color:"black"}}>Home</Link></li>
+                    <li><i class="fa-solid fa-angles-right"></i><Link to='/reference' style={{color:"black"}}>Reference</Link></li>
+                    <li><i class="fa-solid fa-angles-right"></i><Link to='/wsubmit' style={{color:"black"}}>Submission</Link></li>
+                    <li><i class="fa-solid fa-angles-right"></i><Link to='/discussion' style={{color:"black"}}>Discussion</Link></li>
                 </ul>
                </div>
             </div>
