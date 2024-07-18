@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import Head from "./Head"
 import "./header.css"
+import { Button } from "@mui/material"
 
 const Header = () => {
   const [click, setClick] = useState(false)
@@ -26,7 +27,7 @@ const Header = () => {
             </li>
           </ul>
           <div className='start'>
-            <div className='button' style={{textDecoration:"none"}}><Link to='/login'>Logout</Link></div>
+            <div className='button' ><Link to='/login' ><Button style={{color:"white"}}>Logout</Button></Link></div>
             {/* <span>|</span> */}
             {/* <div className='button'><Link to='/signup'>Signup</Link></div> */}
           </div>
