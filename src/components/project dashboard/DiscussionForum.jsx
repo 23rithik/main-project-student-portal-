@@ -51,15 +51,23 @@ export default function DiscussionForum() {
                       value={newPost}
                       onChange={(event) => setNewPost(event.target.value)}                    
                     />
-                    <br /><br />
-                    <Button type="submit" variant="contained"  disabled={!newPost}  >
-                      Submit
-                    </Button>
+                    
+                    
                     </div>
                 )}
                 </Box>
         </Box>
+        
 
+
+        
+        <Box gridColumn="span 12" sx={{marginLeft:"10%"}}>
+        {isPostOpen && ( 
+              <Button type="submit" variant="contained"  disabled={!newPost}  >
+                      Submit
+                </Button>
+        )}
+        </Box>
         <Box gridColumn="span 12" sx={{marginLeft:"10%"}}>
           <Typography align='left'>
             Posts

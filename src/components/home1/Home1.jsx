@@ -3,15 +3,15 @@ import OnlineCourses from "../allcourses/OnlineCourses"
 import Hero from "./hero/Hero"
 import Testimonal from "./testimonal/Testimonal"
 import About from '../about/About'
-const Home = () => {
+const Home1 = () => {
   return (
     <>
       <Hero />
-      <About/>
+      {/* <About/>
       <OnlineCourses />
-      <Testimonal />
+      <Testimonal /> */}
     </>
   )
 }
 
-export default Home
+export default Home1

@@ -8,15 +8,15 @@ const Hero = () => {
       <section className='hero'>
         <div className='container'>
           <div className='row'>
-            <Heading subtitle='WELCOME TO ICTAK' title='Best Online Education Expertise' />
+            <Heading subtitle='WELCOME TO ICTAK' title='Project Dashboard' />
             <p>ICT Academy of Kerala (ICTAK) is a social enterprise officially launched on the 24th of June, 2014.</p>
             <div className='button'>
               <button className='primary-btn'>
-                GET STARTED NOW <i className='fa fa-long-arrow-alt-right'></i>
+                GET OVERVIEW DOCUMENT <i className='fa fa-long-arrow-alt-right'></i>
               </button>
-              <button>
+              {/* <button>
                 VIEW COURSE <i className='fa fa-long-arrow-alt-right'></i>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

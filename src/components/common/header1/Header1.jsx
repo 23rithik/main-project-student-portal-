@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
-import Head from "./Head"
+import Head from "./Head1"
 import "./header.css"
 import { Button } from "@mui/material"
 
-const Header = () => {
+const Header1 = () => {
   const [click, setClick] = useState(false)
 
   return (
@@ -14,19 +14,22 @@ const Header = () => {
         <nav className='flexSB'>
           <ul className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
             <li>
-              <Link to='/'>Home</Link>
+              <Link to='/project'>Home</Link>
             </li>
             <li>
-              <Link to='/'>All Courses</Link>
+              <Link to='/reference'>Reference</Link>
             </li>
             <li>
-              <Link to='/'>About</Link>
+              <Link to='/wsubmit'>Submission</Link>
+            </li>
+            <li>
+              <Link to='/discussion'>Discussion</Link>
             </li>
           </ul>
           <div className='start'>
-            <div className='button'><Link to='/login'><Button style={{color:"white"}}>Login</Button></Link></div>
-            <span>|</span>
-            <div className='button'><Link to='/signup'><Button style={{color:"white"}}>Signup</Button></Link></div>
+            <div className='button' ><Link to='/' ><Button style={{color:"white"}}>Logout</Button></Link></div>
+            {/* <span>|</span> */}
+            {/* <div className='button'><Link to='/signup'>Signup</Link></div> */}
           </div>
           <button className='toggle' onClick={() => setClick(!click)}>
             {click ? <i className='fa fa-times'> </i> : <i className='fa fa-bars'></i>}
@@ -37,4 +40,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default Header1
