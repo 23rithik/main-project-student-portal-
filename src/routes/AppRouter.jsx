@@ -22,16 +22,25 @@ import Header1 from '../components/common/header1/Header1';
 import Main from '../components/main/Main';
 import Main1 from '../components/main/Main1';
 import OnlineCourses from '../components/allcourses/OnlineCourses';
+import ProjectTopiclist from '../components/student dashboard/ProjectTopiclist';
+import ProjectDescription from '../components/student dashboard/ProjectDescription';
+import Main2 from '../components/main/main2';
 
 const AppRouter = () => {
   return (
     <Router>
       
       <Routes>
+        {/* Home path */}
         <Route path="/" element={<Main1 child={<Home/>}/>} />
         <Route path="/signup" element={<Main1 child={<Signup />}/>} />
         <Route path="/login" element={<Main1 child={<Login />}/>}/>
-        
+
+        {/* Student dashboard path */}
+        <Route path='/student' element={<Main2 child={<ProjectTopiclist/>}/>}></Route>
+        <Route path='/description' element={<Main2 child={<ProjectDescription/>}/>}></Route>
+
+        {/* project dashboard path */}
         <Route path="/project" element={<Main child={<Home1 />}/>} />
         <Route path="/discussion" element={<Main child={<DiscussionForum />}/>} />
         <Route path="/reference" element={<Main child={<Reference />}/>} />
