@@ -18,7 +18,7 @@ Register, Cart, and Admin Dashboard (if the user is an admin),Responsive Design:
 screen sizes.</p>
     </div>
     <div className='d-flex justify-content-center gap-3' >
-    <Button style={{backgroundColor:'#00a6bb'}} variant='contained'>Select</Button>
+    <Link to={'/project'}><Button style={{backgroundColor:'#00a6bb'}} variant='contained'>Select</Button></Link>
 
     <Link to='/student'><Button style={{backgroundColor:'#00a6bb'}} variant='contained'>Back</Button></Link>
     </div>
