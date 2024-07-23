@@ -1,6 +1,7 @@
 import { Button, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableRow, TextField, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import Breadcrumbs from '../Breadcrumbs';
+import { Link } from 'react-router-dom';
 
 const Wsubmitform1 = () => {
   const [form, setForm] = useState({
@@ -67,6 +68,7 @@ const Wsubmitform1 = () => {
               <TableRow>
                 <TableCell component="th" scope="row">
                   <Button variant="contained" color="primary" onClick={handleSubmit}>Submit</Button>
+                  <Link to={'/wsubmit'}><Button variant="outlined" color="error" style={{ marginLeft: '10px' }}>Cancel</Button></Link>
                 </TableCell>
                 <TableCell align="left"></TableCell>
               </TableRow>

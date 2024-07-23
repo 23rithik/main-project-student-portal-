@@ -38,8 +38,11 @@ const Wsubmitlink1 = () => {
               <TableRow>
                 <TableCell component="th" scope="row">
                   <Link to={'/wsubmitform1'} style={{ textDecoration: 'none' }}><Button variant="contained" color="primary">Submit</Button></Link>
+                  <Link to={'/wsubmit'}><Button variant="outlined" color="error" style={{ marginLeft: '10px' }}>Cancel</Button></Link>
                 </TableCell>
-                <TableCell align="left"></TableCell>
+                <TableCell align="left">
+                {/* <Link to={'/wsubmitform1'} style={{ textDecoration: 'none' }}><Button variant="contained" color="primary">Submit</Button></Link> */}
+                </TableCell>
               </TableRow>
             </TableBody>
           </Table>

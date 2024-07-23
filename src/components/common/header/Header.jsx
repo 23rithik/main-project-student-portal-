@@ -1,11 +1,16 @@
 import React, { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom";
 import Head from "./Head"
 import "./header.css"
 import { Button } from "@mui/material"
 
 const Header = () => {
-  const [click, setClick] = useState(false)
+  const [click, setClick] = useState(false);
+  const location = useLocation();
+
+  const getLinkStyle = (path) => {
+    return location.pathname === path ? { color: "black" } : {};
+  };
 
   return (
     <>
@@ -14,13 +19,13 @@ const Header = () => {
         <nav className='flexSB'>
           <ul className={click ? "mobile-nav" : "flexSB "} onClick={() => setClick(false)}>
             <li>
-              <Link to='/'>Home</Link>
+              <Link to='/' style={getLinkStyle('/')}>Home</Link>
             </li>
             <li>
-              <Link to='/student'>All Courses</Link>
+              <Link to='/student' style={getLinkStyle('/student')}>All Courses</Link>
             </li>
             <li>
-              <Link to='/'>About</Link>
+              <Link to='/' >About</Link>
             </li>
           </ul>
           <div className='start'>
